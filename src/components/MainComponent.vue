@@ -1,7 +1,8 @@
 <template>
         <main class="text-white ">
+        <SectionJumbo />
         <SectionCard />
-        <section class="banner">
+        <section class="banner bg-primary">
           <div class="container">
             <div class="row row-cols-5">
               <div class="cols d-flex align-items-center" v-for="({titolo, src}, index) in itemBanner" :key="index">
@@ -22,12 +23,14 @@
 
 <script>
 import SectionCard from '@/components/SectionCardComponent';
+import SectionJumbo from '@/components/SectionJumboComponent';
 
 
 export default {
     name: 'MainComponent',
     components: {
-        SectionCard
+        SectionCard,
+        SectionJumbo
     },
     data() {
         return {
@@ -65,13 +68,8 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-    .jumbotrone {
-    background-color: black;
-    height: 130px;
-    }
 
     .banner {
-        background-color: blue;
         z-index: 10;
         .container {
             .row {

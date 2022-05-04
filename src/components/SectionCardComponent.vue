@@ -23,7 +23,7 @@
             </div>
             <!-- /.row -->
             <div class="btn_load text-center py-1 px-4 bg-primary d-inline-block">
-                <a class="text-decoration-none text-white" href="#">Load More</a>
+                <a class="text-decoration-none text-white fw-bold text-uppercase" href="#">Load More</a>
             </div>
             <!-- /.btn_load -->
         </div>
