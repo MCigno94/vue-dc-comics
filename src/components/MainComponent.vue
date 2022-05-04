@@ -1,17 +1,11 @@
 <template>
-        <main class="text-white">
-        <section class="jumbotrone">
-          <div class="container">
-              <p class="text-white">Contenuto Qui</p>
-          </div>
-          <!-- /.container -->
-        </section>
-        <!-- /.jumbotrone -->
-        <section class="footer_main">
+        <main class="text-white ">
+        <SectionCard />
+        <section class="banner">
           <div class="container">
             <div class="row row-cols-5">
-              <div class="cols d-flex align-items-center" v-for="({titolo}, index) in itemFooter" :key="index">
-                  <img class="image img-fluid" src="@/assets/img/buy-comics-digital-comics.png" :alt="titolo" />
+              <div class="cols d-flex align-items-center" v-for="({titolo, src}, index) in itemBanner" :key="index">
+                  <img class="image img-fluid" :src="src" :alt="titolo" />
                   <div class="description text-uppercase px-3">{{titolo}}</div>
                   <!-- /.description -->
               </div>
@@ -22,38 +16,45 @@
           <!-- /.container -->
 
         </section>
-        <!-- /.footer_main -->
+        <!-- /.banner -->
     </main>
 </template>
 
 <script>
+import SectionCard from '@/components/SectionCardComponent';
+
 
 export default {
     name: 'MainComponent',
     components: {
-        
+        SectionCard
     },
     data() {
         return {
-            itemFooter: [
-                {
-                    src: "@/assets/img/buy-comics-digital-comics.png",
+            itemBanner: [
+                {   
+                    id: 1,
+                    src: require("@/assets/img/buy-comics-digital-comics.png"),
                     titolo: "Digital Comics"
                 },
-                {
-                    src: "@/assets/img/buy-comics-merchandise.png",
+                {   
+                    id: 2,
+                    src: require("@/assets/img/buy-comics-merchandise.png"),
                     titolo: "DC Merchandise"
                 },
-                {
-                    src: "@/assets/img/buy-comics-shop-locator.png",
+                {   
+                    id: 3,
+                    src: require("@/assets/img/buy-comics-shop-locator.png"),
                     titolo: "Subscription"
                 },
                 {
-                    src: "@/assets/img/buy-comics-subscriptions.png",
+                    id: 4,
+                    src: require("@/assets/img/buy-comics-subscriptions.png"),
                     titolo: "Comic Shop Locator"
                 },
                 {
-                    src: "@/assets/img/buy-dc-power-visa.svg",
+                    id: 5,
+                    src: require("@/assets/img/buy-dc-power-visa.svg"),
                     titolo: "DC Pover Visa"
                 },
 
@@ -69,7 +70,7 @@ export default {
     height: 130px;
     }
 
-    .footer_main {
+    .banner {
         background-color: blue;
         z-index: 10;
         .container {

@@ -1,5 +1,5 @@
 <template>
-    <div class="logo-nav col-4 text-start">
+    <div class="logo-nav">
         <img class="img-fluid" src="@/assets/img/dc-logo.png" alt="Logo DC">
     </div>
     <!-- /.logo-nav -->

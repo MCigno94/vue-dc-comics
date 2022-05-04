@@ -122,13 +122,17 @@ footer {
             background-repeat: no-repeat;
             background-size: cover;
         }
+        h3 {
+            font-size: 1rem;
+            margin-bottom: 1rem;
+        }
+        ul {
+            padding: 0;
+            list-style: none;
+            li {
+                font-size: 14px;
+            }
+        }
     }
-  h3 {
-      font-size: 1rem;
-      margin-bottom: 1rem;
-  }
-  ul {
-    list-style: none;
-  }
 }
 </style>
